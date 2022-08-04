@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.petmily.mapper.MemberMapper">
+
+    <!--테스트용-->
+    <select id="selectOne" resultType="org.petmily.domain.member.Member">
+        SELECT *
+        from Member
+        where mNumber = 2
+    </select>
+
+    <select id="selectByPk" resultType="org.petmily.domain.member.Member">
+        select *
+        from member
+        where mNumber = #{pk}
+    </select>
+
+    <insert id="insert">
+        insert into member(id, pw, name, birth, gender, email, phone)
+        values (#{id}, #{pw}, #{name}, #{birth}, #{gender}, #{email}, #{phone})
+    </insert>
+
+    <update id="update">
+        update MEMBER
+        set PW = #{pw}, NAME = #{name}, PHONE = #{phone}, EMAIL = #{email}
+        where mNumber = #{mNumber}
+    </update>
+
+    <delete id="delete">
+        delete from MEMBER
+        where mNumber = #{mNumber}
+    </delete>
+
+    <select id="selectmNumber" resultType="long">
+        SELECT mNumber
+        from Member
+        where id = #{id} and pw = #{pw}
+    </select>
+
+    <select id="selectMemberById" resultType="org.petmily.domain.member.Member">
+        select *
+        from MEMBER
+        where ID = #{id}
+    </select>
+</mapper>
