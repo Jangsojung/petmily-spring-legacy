@@ -15,9 +15,9 @@
     <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
         <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
         <property name="jdbcUrl"
-                  value="jdbc:log4jdbc:oracle:thin:@petmily_medium?TNS_ADMIN=/Users/joojongbum/oracle_db/Wallet_petmily/"></property>
-        <property name="username" value="jjb1"></property>
-        <property name="password" value="Petmilymember1"></property>
+                  value="jdbc:log4jdbc:oracle:thin:@petmily_medium?TNS_ADMIN=C:/wallet/Wallet_petmily/"></property>
+        <property name="username" value="jsj7"></property>
+        <property name="password" value="Petmilymember7"></property>
     </bean>
 
     <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource">
