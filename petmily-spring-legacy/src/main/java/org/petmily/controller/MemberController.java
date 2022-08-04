@@ -32,7 +32,7 @@ public class MemberController {
         log.info("넘어온 joinRequest : {}", joinRequest);
 
         if (!joinRequest.isPwEqualToConfirm()) {
-            return "login/joinForm";
+            return "/login/joinForm";
         }
 
         memberService.join(joinRequest);
